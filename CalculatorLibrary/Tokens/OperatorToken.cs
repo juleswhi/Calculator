@@ -9,7 +9,6 @@ public class OperatorToken<T> : Token<T>, IToken where T : Enum
     }
     public TokenType TokenType { get; init; }
     public override T token { get; init; }
-    public override T GetToken() => token;
 }
 
 

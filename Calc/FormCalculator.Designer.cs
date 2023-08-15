@@ -1,6 +1,6 @@
 ﻿namespace Calculator
 {
-    partial class Form1
+    partial class FormCalculator
     {
         /// <summary>
         ///  Required designer variable.
@@ -80,7 +80,7 @@
             btn0.TabIndex = 2;
             btn0.Text = "0";
             btn0.UseVisualStyleBackColor = true;
-            btn0.Click += btn0_Click;
+            btn0.Click += NumberClick;
             // 
             // btn5
             // 
@@ -91,7 +91,7 @@
             btn5.TabIndex = 3;
             btn5.Text = "5";
             btn5.UseVisualStyleBackColor = true;
-            btn5.Click += btn5_Click;
+            btn5.Click += NumberClick;
             // 
             // btn2
             // 
@@ -102,7 +102,7 @@
             btn2.TabIndex = 4;
             btn2.Text = "2";
             btn2.UseVisualStyleBackColor = true;
-            btn2.Click += btn2_Click;
+            btn2.Click += NumberClick;
             // 
             // btn3
             // 
@@ -113,7 +113,7 @@
             btn3.TabIndex = 5;
             btn3.Text = "3";
             btn3.UseVisualStyleBackColor = true;
-            btn3.Click += btn3_Click;
+            btn3.Click += NumberClick;
             // 
             // btn4
             // 
@@ -124,7 +124,7 @@
             btn4.TabIndex = 6;
             btn4.Text = "4";
             btn4.UseVisualStyleBackColor = true;
-            btn4.Click += btn4_Click;
+            btn4.Click += NumberClick;
             // 
             // btn1
             // 
@@ -135,7 +135,7 @@
             btn1.TabIndex = 7;
             btn1.Text = "1";
             btn1.UseVisualStyleBackColor = true;
-            btn1.Click += btn1_Click;
+            btn1.Click += NumberClick;
             // 
             // btn6
             // 
@@ -146,7 +146,7 @@
             btn6.TabIndex = 8;
             btn6.Text = "6";
             btn6.UseVisualStyleBackColor = true;
-            btn6.Click += btn6_Click;
+            btn6.Click += NumberClick;
             // 
             // btn9
             // 
@@ -157,7 +157,7 @@
             btn9.TabIndex = 9;
             btn9.Text = "9";
             btn9.UseVisualStyleBackColor = true;
-            btn9.Click += btn9_Click;
+            btn9.Click += NumberClick;
             // 
             // btn8
             // 
@@ -168,7 +168,7 @@
             btn8.TabIndex = 10;
             btn8.Text = "8";
             btn8.UseVisualStyleBackColor = true;
-            btn8.Click += btn8_Click;
+            btn8.Click += NumberClick;
             // 
             // btn7
             // 
@@ -179,7 +179,7 @@
             btn7.TabIndex = 11;
             btn7.Text = "7";
             btn7.UseVisualStyleBackColor = true;
-            btn7.Click += btn7_Click;
+            btn7.Click += NumberClick;
             // 
             // btnDiv
             // 
@@ -190,7 +190,7 @@
             btnDiv.TabIndex = 12;
             btnDiv.Text = "/";
             btnDiv.UseVisualStyleBackColor = true;
-            btnDiv.Click += btnDiv_Click;
+            btnDiv.Click += OperatorClick;
             // 
             // btnMul
             // 
@@ -201,7 +201,7 @@
             btnMul.TabIndex = 13;
             btnMul.Text = "*";
             btnMul.UseVisualStyleBackColor = true;
-            btnMul.Click += btnMul_Click;
+            btnMul.Click += OperatorClick;
             // 
             // btnSub
             // 
@@ -212,7 +212,7 @@
             btnSub.TabIndex = 14;
             btnSub.Text = "-";
             btnSub.UseVisualStyleBackColor = true;
-            btnSub.Click += btnSub_Click;
+            btnSub.Click += OperatorClick;
             // 
             // btnAdd
             // 
@@ -223,7 +223,7 @@
             btnAdd.TabIndex = 15;
             btnAdd.Text = "+";
             btnAdd.UseVisualStyleBackColor = true;
-            btnAdd.Click += btnAdd_Click;
+            btnAdd.Click += OperatorClick;
             // 
             // btnClear
             // 
@@ -249,7 +249,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(447, 450);
+            ClientSize = new Size(465, 450);
             Controls.Add(panel1);
             Controls.Add(btnClear);
             Controls.Add(btnAdd);

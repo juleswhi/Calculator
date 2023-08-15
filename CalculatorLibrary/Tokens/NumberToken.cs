@@ -11,6 +11,5 @@ public class NumberToken<T> : Token<T>, IToken where T : struct
     public override T token { get; init; }
 
     public TokenType TokenType { get; init; }
-    public override T GetToken() => token;
 
 }

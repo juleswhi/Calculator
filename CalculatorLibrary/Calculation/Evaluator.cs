@@ -1,11 +1,10 @@
 ﻿using CalculatorLibrary.Tokens;
 namespace CalculatorLibrary.Calculation;
 
-public static class Calculator
+public static class Evaluator
 {
     public static unsafe void Evaluate(double* output, int index)
     {
-
         // -1 index means last operation
         if (index == -1) index = OperationHolder.Tokens.Count - 3;
         var OpToken = OperationHolder.Tokens[OperationHolder.Tokens.Count - 1];
@@ -13,8 +12,9 @@ public static class Calculator
         if (OpToken.TokenType != TokenType.Number) return;
 
         OperatorType? Operator = null;
-        double left = -1;
-        double right = -1;
+        // double left = -1;
+        (double left, double right) = (-1, -1);
+        // double right = -1;
         bool isLeft = true;
 
         for (var i = index; i < OperationHolder.Tokens.Count; i++)

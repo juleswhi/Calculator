@@ -1,4 +1,5 @@
-﻿public enum OperatorType
+﻿// Types of Operations
+public enum OperatorType
 {
     Addition,
     Subtraction,
