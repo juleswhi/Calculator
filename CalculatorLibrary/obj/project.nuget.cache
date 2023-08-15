@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "so6+KQr32DOq5BtsR9AmyM9wuYk51oVTBnkthMzWmQYLMhpfsjo6q/KiqEuZbyAK5yXoNK4V0nc1E5/7Mhfx5A==",
+  "dgSpecHash": "CPIPX4aK/9lBHY1Eh51ZHvqO7LMY6hLs9c97KU+x8iMgtiHo6gAruyiqE1XZlf3YoFXMoJb8jrqi3D3laDigvA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\elliot alderson\\Documents\\GitHub\\CalculatorLibrary\\CalculatorLibrary.csproj",
+  "projectFilePath": "C:\\Users\\elliot alderson\\Documents\\GitHub\\Calculator\\CalculatorLibrary\\CalculatorLibrary.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

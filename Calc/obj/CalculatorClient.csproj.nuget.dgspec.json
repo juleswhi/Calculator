@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\elliot alderson\\Documents\\GitHub\\Calculator\\CalculatorClient.csproj": {}
+    "C:\\Users\\elliot alderson\\Documents\\GitHub\\Calculator\\Calc\\CalculatorClient.csproj": {}
   },
   "projects": {
-    "C:\\Users\\elliot alderson\\Documents\\GitHub\\CalculatorLibrary\\CalculatorLibrary.csproj": {
+    "C:\\Users\\elliot alderson\\Documents\\GitHub\\Calculator\\CalculatorLibrary\\CalculatorLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\elliot alderson\\Documents\\GitHub\\CalculatorLibrary\\CalculatorLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\elliot alderson\\Documents\\GitHub\\Calculator\\CalculatorLibrary\\CalculatorLibrary.csproj",
         "projectName": "CalculatorLibrary",
-        "projectPath": "C:\\Users\\elliot alderson\\Documents\\GitHub\\CalculatorLibrary\\CalculatorLibrary.csproj",
+        "projectPath": "C:\\Users\\elliot alderson\\Documents\\GitHub\\Calculator\\CalculatorLibrary\\CalculatorLibrary.csproj",
         "packagesPath": "C:\\Users\\elliot alderson\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\elliot alderson\\Documents\\GitHub\\CalculatorLibrary\\obj\\",
+        "outputPath": "C:\\Users\\elliot alderson\\Documents\\GitHub\\Calculator\\CalculatorLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\elliot alderson\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -59,14 +59,14 @@
         }
       }
     },
-    "C:\\Users\\elliot alderson\\Documents\\GitHub\\Calculator\\CalculatorClient.csproj": {
+    "C:\\Users\\elliot alderson\\Documents\\GitHub\\Calculator\\Calc\\CalculatorClient.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\elliot alderson\\Documents\\GitHub\\Calculator\\CalculatorClient.csproj",
+        "projectUniqueName": "C:\\Users\\elliot alderson\\Documents\\GitHub\\Calculator\\Calc\\CalculatorClient.csproj",
         "projectName": "CalculatorClient",
-        "projectPath": "C:\\Users\\elliot alderson\\Documents\\GitHub\\Calculator\\CalculatorClient.csproj",
+        "projectPath": "C:\\Users\\elliot alderson\\Documents\\GitHub\\Calculator\\Calc\\CalculatorClient.csproj",
         "packagesPath": "C:\\Users\\elliot alderson\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\elliot alderson\\Documents\\GitHub\\Calculator\\obj\\",
+        "outputPath": "C:\\Users\\elliot alderson\\Documents\\GitHub\\Calculator\\Calc\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\elliot alderson\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -83,8 +83,8 @@
           "net7.0-windows7.0": {
             "targetAlias": "net7.0-windows",
             "projectReferences": {
-              "C:\\Users\\elliot alderson\\Documents\\GitHub\\CalculatorLibrary\\CalculatorLibrary.csproj": {
-                "projectPath": "C:\\Users\\elliot alderson\\Documents\\GitHub\\CalculatorLibrary\\CalculatorLibrary.csproj"
+              "C:\\Users\\elliot alderson\\Documents\\GitHub\\Calculator\\CalculatorLibrary\\CalculatorLibrary.csproj": {
+                "projectPath": "C:\\Users\\elliot alderson\\Documents\\GitHub\\Calculator\\CalculatorLibrary\\CalculatorLibrary.csproj"
               }
             }
           }
