@@ -1,0 +1,12 @@
+C:\Users\elliot alderson\Documents\GitHub\CalculatorLibrary\bin\Debug\net7.0\CalculatorLibrary.deps.json
+C:\Users\elliot alderson\Documents\GitHub\CalculatorLibrary\bin\Debug\net7.0\CalculatorLibrary.dll
+C:\Users\elliot alderson\Documents\GitHub\CalculatorLibrary\bin\Debug\net7.0\CalculatorLibrary.pdb
+C:\Users\elliot alderson\Documents\GitHub\CalculatorLibrary\obj\Debug\net7.0\CalculatorLibrary.csproj.AssemblyReference.cache
+C:\Users\elliot alderson\Documents\GitHub\CalculatorLibrary\obj\Debug\net7.0\CalculatorLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elliot alderson\Documents\GitHub\CalculatorLibrary\obj\Debug\net7.0\CalculatorLibrary.AssemblyInfoInputs.cache
+C:\Users\elliot alderson\Documents\GitHub\CalculatorLibrary\obj\Debug\net7.0\CalculatorLibrary.AssemblyInfo.cs
+C:\Users\elliot alderson\Documents\GitHub\CalculatorLibrary\obj\Debug\net7.0\CalculatorLibrary.csproj.CoreCompileInputs.cache
+C:\Users\elliot alderson\Documents\GitHub\CalculatorLibrary\obj\Debug\net7.0\CalculatorLibrary.dll
+C:\Users\elliot alderson\Documents\GitHub\CalculatorLibrary\obj\Debug\net7.0\refint\CalculatorLibrary.dll
+C:\Users\elliot alderson\Documents\GitHub\CalculatorLibrary\obj\Debug\net7.0\CalculatorLibrary.pdb
+C:\Users\elliot alderson\Documents\GitHub\CalculatorLibrary\obj\Debug\net7.0\ref\CalculatorLibrary.dll
