@@ -1,51 +1,50 @@
 ﻿using CalculatorLibrary.Tokens;
-namespace CalculatorLibrary.Calculation;
 
+namespace CalculatorLibrary.Calculation;
 public static class Evaluator
 {
     public static unsafe void Evaluate(double* output, int index)
     {
         // -1 index means last operation
         if (index == -1) index = OperationHolder.Tokens.Count - 3;
-        var OpToken = OperationHolder.Tokens[OperationHolder.Tokens.Count - 1];
+
+        var lastToken = OperationHolder.Tokens[^1];
+
         // returns if last Token is operation
-        if (OpToken.TokenType != TokenType.Number) return;
+        if (lastToken.TokenType != TokenType.Number) return;
 
-        OperatorType? Operator = null;
+        OperatorType? currentOperator = null;
         // double left = -1;
-        (double left, double right) = (-1, -1);
+        (double left, double right) operands = (-1, -1);
         // double right = -1;
-        bool isLeft = true;
+        bool isLeftOperand = true;
 
-        for (var i = index; i < OperationHolder.Tokens.Count; i++)
+        for (var i = index; i < OperationHolder.Count; i++)
         {
-            var TokenType = OperationHolder.Tokens[i].TokenType;
+            var currentTokenType = OperationHolder.Tokens[i].TokenType;
 
-            if (TokenType == TokenType.Operator)
-            {
-                Operator = ((OperatorToken<OperatorType>)OperationHolder.Tokens[i]).token;
-                isLeft = false;
-            }
+            switch (currentTokenType) {
 
-            else if (TokenType == TokenType.Number)
-            {
-                // Cast Operation to NumberToken and place on correct side
-                var num = ((NumberToken<double>)OperationHolder.Tokens[i]).token;
-                if (isLeft) { left = num; continue; }
-                right = num;
-                break;
+                case TokenType.Operator:
+                    currentOperator = ((OperatorToken<OperatorType>)OperationHolder.Tokens[i]).token;
+                    isLeftOperand = false; break;
+
+                case TokenType.Number:
+                    var num = ((NumberToken<double>)OperationHolder.Tokens[i]).token;
+                    if(isLeftOperand) { operands.left = num; continue; }
+                    operands.right = num; break;
             }
 
         }
 
         // Dereference and assign to sum
-        *output = Operator switch
+        *output = currentOperator switch
         {
-            OperatorType.Addition => left + right,
-            OperatorType.Subtraction => left - right,
-            OperatorType.Multiplication => left * right,
-            OperatorType.Division => left / right,
-            _ => left
+            OperatorType.Addition => operands.left + operands.right,
+            OperatorType.Subtraction => operands.left - operands.right,
+            OperatorType.Multiplication => operands.left * operands.right,
+            OperatorType.Division => operands.left / operands.right,
+            _ => -1
         };
     }
 }

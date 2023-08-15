@@ -11,15 +11,44 @@ public partial class FormCalculator : Form
         InitializeComponent();
     }
 
-    // Adds Current Number to stack and then evaluate
+
+    // Stores Number Before Being Tokenised
+    double currentNumber = 0;
+
+    private void UpdateOperator() => lblResult.Text = currentNumber.ToString();
+    private void UpdateOperator(string str) => lblResult.Text = str;
+
+
+    private bool inChain = false;
+
+    #region Button Clicks
+
+    private bool OperatorClick()
+    {
+        if (OperationHolder.Tokens.Count == 0)
+        {
+            currentNumber.Parse().AddToStack();
+            currentNumber = 0;
+            return true;
+        }
+
+        if (inChain)
+            return true;
+
+        // If last token in stack is operator, return
+        if (OperationHolder.Tokens[OperationHolder.Count - 1].TokenType == TokenType.Operator) return false;
+        currentNumber.Parse().AddToStack();
+        currentNumber = 0; // Reset Num
+        return true;
+    }
     private void btnCalculate_Click(object sender, EventArgs e)
     {
-        CurrentNumber.Parse().AddToStack();
+        currentNumber.Parse().AddToStack();
 
         // Tuple Deconstruction
-        (double result, CurrentNumber) = (0, 0);
+        currentNumber = 0;
+        double result = 0;
 
-        // Unsafe because ref
         unsafe { Evaluator.Evaluate(&result, -1); }
 
         lblResult.Text = result.ToString();
@@ -31,35 +60,6 @@ public partial class FormCalculator : Form
 
 
 
-    // Stores Number Before Being Tokenised
-    double CurrentNumber = 0;
-
-    // Changes Label to display data
-    private void UpdateOperator() => lblResult.Text = CurrentNumber.ToString();
-    private void UpdateOperator(string str) => lblResult.Text = str;
-
-    // First Operation = false, Next Operations = true
-    private bool inChain = false;
-
-    // Makes Sure a Operator can be added to stack
-    private bool OperatorClick()
-    {
-        if (OperationHolder.Tokens.Count == 0)
-        {
-            CurrentNumber.Parse().AddToStack();
-            CurrentNumber = 0;
-            return true;
-        }
-
-        if (inChain)
-            return true;
-
-        // If last token in stack is operator, return
-        if (OperationHolder.Tokens[OperationHolder.Count - 1].TokenType == TokenType.Operator) return false;
-        CurrentNumber.Parse().AddToStack();
-        CurrentNumber = 0; // Reset Num
-        return true;
-    }
 
 
     // New Stack
@@ -93,7 +93,9 @@ public partial class FormCalculator : Form
     private void NumberClick(object sender, EventArgs e)
     {
         int index = Convert.ToInt32(((Button)sender).Text);
-        CurrentNumber = Convert.ToDouble($"{CurrentNumber}{index}");
+        currentNumber = Convert.ToDouble($"{currentNumber}{index}");
         UpdateOperator();
     }
+
+    #endregion
 }
