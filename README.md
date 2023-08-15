@@ -25,7 +25,7 @@ Because the stack only gets added to, it can be used as a history.
 
 
 
-### ***Evaluate(*double output, int index)***
+### ***Evaluate(\*double output, int index)***
 The Evaluate function takes in a pointer to an output variable, and an index of where to start the calculations
 
 The index will be the index of the first NumberToken that is in the Equation ( Left Token )
