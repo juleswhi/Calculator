@@ -7,7 +7,7 @@ Its all about tokens fr
 <br>
 A List of Tokens ( or a stack ) are used to keep track of the operations
 
-There are two types of Tokens, **NumberToken*\<T\> and **OperatorToken**\<T\>
+There are two types of Tokens, **NumberToken**\<T\> and **OperatorToken**\<T\>
 Both of these tokens have restraints on their generics, NumberToken only accepts structs, and OperationToken Enums
 
 When the user clicks on a number, it is placed into a 'Holding' variable until the user enters a Operator
