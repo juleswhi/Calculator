@@ -5,5 +5,6 @@ public enum OperatorType
     Subtraction,
     Multiplication,
     Division,
+    Square,
     None
 }

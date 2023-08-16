@@ -1,6 +1,5 @@
-using CalculatorLibrary.Calculation;
+﻿using CalculatorLibrary.Calculation;
 using CalculatorLibrary.Tokens;
-
 
 namespace Calculator;
 
@@ -10,7 +9,6 @@ public partial class FormCalculator : Form
     {
         InitializeComponent();
     }
-
 
     // Stores Number Before Being Tokenised
     double currentNumber = 0;
@@ -36,20 +34,27 @@ public partial class FormCalculator : Form
             return true;
 
         // If last token in stack is operator, return
-        if (OperationHolder.Tokens[OperationHolder.Count - 1].TokenType == TokenType.Operator) return false;
+        if (OperationHolder.Last == TokenType.Operator) return false;
+        // Add to Stack and then Reset Number
         currentNumber.Parse().AddToStack();
-        currentNumber = 0; // Reset Num
+        currentNumber = 0;
         return true;
+    }
+
+    private void Pi_Click(object sender, EventArgs e)
+    {
+        if (currentNumber != 0) return;
+        currentNumber = Convert.ToDouble($"{currentNumber}{Math.PI}");
+        UpdateOperator("π");
     }
     private void btnCalculate_Click(object sender, EventArgs e)
     {
         currentNumber.Parse().AddToStack();
 
-        // Tuple Deconstruction
         currentNumber = 0;
         double result = 0;
 
-        unsafe { Evaluator.Evaluate(&result, -1); }
+        Evaluator.Evaluate(ref result, -1);
 
         lblResult.Text = result.ToString();
 
@@ -84,10 +89,9 @@ public partial class FormCalculator : Form
             case "-": OperatorType.Subtraction.Parse().AddToStack(); break;
             case "*": OperatorType.Multiplication.Parse().AddToStack(); break;
             case "/": OperatorType.Division.Parse().AddToStack(); break;
+            case "^2": OperatorType.Square.Parse().AddToStack(); break;
             default: break;
         }
-
-
     }
 
     private void NumberClick(object sender, EventArgs e)

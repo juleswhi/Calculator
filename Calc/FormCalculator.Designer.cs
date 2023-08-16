@@ -46,11 +46,14 @@
             btnAdd = new Button();
             btnClear = new Button();
             panel1 = new Panel();
+            btnSquare = new Button();
+            btnPI = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
             // btnCalculate
             // 
+            btnCalculate.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             btnCalculate.Location = new Point(70, 340);
             btnCalculate.Name = "btnCalculate";
             btnCalculate.Size = new Size(75, 75);
@@ -245,11 +248,35 @@
             panel1.Size = new Size(318, 85);
             panel1.TabIndex = 19;
             // 
-            // Form1
+            // btnSquare
+            // 
+            btnSquare.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            btnSquare.Location = new Point(394, 100);
+            btnSquare.Name = "btnSquare";
+            btnSquare.Size = new Size(75, 75);
+            btnSquare.TabIndex = 20;
+            btnSquare.Text = "^2";
+            btnSquare.UseVisualStyleBackColor = true;
+            btnSquare.Click += OperatorClick;
+            // 
+            // btnPI
+            // 
+            btnPI.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            btnPI.Location = new Point(394, 181);
+            btnPI.Name = "btnPI";
+            btnPI.Size = new Size(75, 75);
+            btnPI.TabIndex = 21;
+            btnPI.Text = "π";
+            btnPI.UseVisualStyleBackColor = true;
+            btnPI.Click += Pi_Click;
+            // 
+            // FormCalculator
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(465, 450);
+            ClientSize = new Size(602, 495);
+            Controls.Add(btnPI);
+            Controls.Add(btnSquare);
             Controls.Add(panel1);
             Controls.Add(btnClear);
             Controls.Add(btnAdd);
@@ -267,7 +294,7 @@
             Controls.Add(btn5);
             Controls.Add(btn0);
             Controls.Add(btnCalculate);
-            Name = "Form1";
+            Name = "FormCalculator";
             Text = "Form1";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -294,5 +321,7 @@
         private Button btnAdd;
         private Button btnClear;
         private Panel panel1;
+        private Button btnSquare;
+        private Button btnPI;
     }
 }
