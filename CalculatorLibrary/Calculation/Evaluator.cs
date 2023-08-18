@@ -34,7 +34,6 @@ public static class Evaluator
                     operands.right = num; break;
 
             }
-
         }
 
         // do the operation based on type
