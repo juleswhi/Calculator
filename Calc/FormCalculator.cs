@@ -23,9 +23,9 @@ public partial class FormCalculator : Form
 
     private bool OperatorClick()
     {
-        if (OperationHolder.Tokens.Count == 0)
+        if (OperationHolder.Count == 0)
         {
-            currentNumber.Parse().AddToStack();
+            currentNumber.Stack();
             currentNumber = 0;
             return true;
         }
@@ -36,7 +36,7 @@ public partial class FormCalculator : Form
         // If last token in stack is operator, return
         if (OperationHolder.Last == TokenType.Operator) return false;
         // Add to Stack and then Reset Number
-        currentNumber.Parse().AddToStack();
+        currentNumber.Stack();
         currentNumber = 0;
         return true;
     }
@@ -49,7 +49,7 @@ public partial class FormCalculator : Form
     }
     private void btnCalculate_Click(object sender, EventArgs e)
     {
-        currentNumber.Parse().AddToStack();
+        currentNumber.Stack();
 
         currentNumber = 0;
         double result = 0;
@@ -58,8 +58,7 @@ public partial class FormCalculator : Form
 
         lblResult.Text = result.ToString();
 
-        result.Parse().AddToStack();
-
+        result.Stack();
         inChain = true;
     }
 
@@ -85,11 +84,11 @@ public partial class FormCalculator : Form
 
         switch (op)
         {
-            case "+": OperatorType.Addition.Parse().AddToStack(); break;
-            case "-": OperatorType.Subtraction.Parse().AddToStack(); break;
-            case "*": OperatorType.Multiplication.Parse().AddToStack(); break;
-            case "/": OperatorType.Division.Parse().AddToStack(); break;
-            case "^2": OperatorType.Square.Parse().AddToStack(); break;
+            case "+": OperatorType.Addition.Stack(); break;
+            case "-": OperatorType.Subtraction.Stack(); break;
+            case "*": OperatorType.Multiplication.Stack(); break;
+            case "/": OperatorType.Division.Stack(); break;
+            case "^2": OperatorType.Square.Stack(); break;
             default: break;
         }
     }

@@ -32,6 +32,7 @@ public static class Evaluator
                     var num = ((NumberToken<double>)OperationHolder.Tokens[i]).token;
                     if(isLeftOperand) { operands.left = num; continue; }
                     operands.right = num; break;
+
             }
 
         }
